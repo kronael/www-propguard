@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-primary text-text-primary overflow-x-hidden font-sans;
+    font-feature-settings: 'ss04' 1;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Background gradient overlay with grid and intersection dots */
+  body::before {
+    content: '';
+    @apply fixed inset-0 pointer-events-none z-[1];
+    background:
+      linear-gradient(rgba(0, 245, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, 0.06) 1px, transparent 1px),
+      radial-gradient(circle at 0px 0px, rgba(0, 245, 255, 0.12) 0.5px, transparent 1px),
+      radial-gradient(circle at 20% 50%, rgba(0, 245, 255, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(0, 255, 136, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(0, 245, 255, 0.03) 0%, transparent 50%);
+    background-size: 64px 64px, 64px 64px, 64px 64px, 100% 100%, 100% 100%, 100% 100%;
+    animation: grid-awaken 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+
+  @keyframes grid-awaken {
+    0% {
+      opacity: 0;
+      transform: scale(1.01);
+      filter: blur(0.5px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0px);
+    }
+  }
+
+  /* Scroll-based grid shine effect */
+  body::after {
+    content: '';
+    @apply fixed inset-0 pointer-events-none z-[2];
+    opacity: 0;
+    transition:
+      opacity 0.4s linear,
+      mask-position 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background-image:
+      linear-gradient(rgba(0, 245, 255, var(--scroll-intensity, 0.3)) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, var(--scroll-intensity, 0.35)) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask: radial-gradient(
+      circle at var(--pulse-x, 50%) var(--pulse-y, 50%),
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,0.8) 7%,
+      rgba(255,255,255,0.5) 14%,
+      rgba(255,255,255,0.2) 26%,
+      rgba(255,255,255,0.05) 36%,
+      rgba(255,255,255,0) 48%
+    );
+    -webkit-mask: radial-gradient(
+      circle at var(--pulse-x, 50%) var(--pulse-y, 50%),
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,0.8) 7%,
+      rgba(255,255,255,0.5) 14%,
+      rgba(255,255,255,0.2) 26%,
+      rgba(255,255,255,0.05) 36%,
+      rgba(255,255,255,0) 48%
+    );
+  }
+
+  /* Mouse movement grid shine effect */
+  html::after {
+    content: '';
+    @apply fixed inset-0 pointer-events-none z-[3];
+    opacity: 0;
+    transition:
+      opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      mask-position 0.08s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background-image:
+      linear-gradient(rgba(0, 245, 255, var(--mouse-intensity, 0.35)) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, var(--mouse-intensity, 0.4)) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask: radial-gradient(
+      circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,0.7) 2%,
+      rgba(255,255,255,0.4) 6%,
+      rgba(255,255,255,0.1) 10%,
+      rgba(255,255,255,0) 14%
+    );
+    -webkit-mask: radial-gradient(
+      circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,0.7) 2%,
+      rgba(255,255,255,0.4) 6%,
+      rgba(255,255,255,0.1) 10%,
+      rgba(255,255,255,0) 14%
+    );
+  }
+
+  /* Scroll shine fade-out state (faster) */
+  body.scroll-fade-out::after {
+    transition:
+      opacity 0.4s linear,
+      mask-position 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Mouse shine fade-out state (linear) */
+  html.mouse-fade-out::after {
+    transition:
+      opacity 0.5s linear,
+      mask-position 0.08s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Shine effect activation states */
+  body.scrolling::after,
+  html.mouse-active::after,
+  html.scrolling::after {
+    opacity: 1;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-7 py-3.5 text-[15px] font-medium rounded-lg transition-all duration-200 cursor-pointer border-none relative overflow-hidden;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-br from-accent to-accent-green text-black shadow-[0_2px_8px_rgba(0,245,255,0.15)];
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-white/20 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300;
+  }
+
+  .btn-primary:hover::before {
+    @apply w-[200px] h-[200px];
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-0.5 scale-[1.01] shadow-[0_4px_15px_rgba(0,245,255,0.25)];
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-text-primary border border-border-light backdrop-blur-[10px];
+  }
+
+  .btn-secondary:hover {
+    @apply bg-primary-surface border-accent shadow-[0_0_20px_rgba(0,245,255,0.2)] -translate-y-0.5;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 relative z-[2];
+  }
+
+  .section-header {
+    @apply text-center mb-16;
+  }
+
+  .section-label {
+    @apply text-xs font-medium tracking-[2px] uppercase text-accent mb-4;
+  }
+
+  .section-title {
+    @apply text-5xl font-medium leading-tight tracking-tight mb-6;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-text-secondary max-w-2xl mx-auto;
+  }
+}
