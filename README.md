@@ -2,6 +2,8 @@
 
 A modern, responsive landing page built with Next.js, React, TypeScript, and Tailwind CSS.
 
+https://kronael.github.io/www-propguard/
+
 ## Features
 
 - ⚡ **Next.js 14** with App Router
