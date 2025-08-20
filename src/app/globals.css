@@ -130,7 +130,7 @@
 
 @layer components {
   .btn {
-    @apply inline-block px-7 py-3.5 text-[15px] font-medium rounded-lg transition-all duration-200 cursor-pointer border-none relative overflow-hidden;
+    @apply inline-block px-6 py-3 sm:px-7 sm:py-3.5 text-sm sm:text-[15px] font-medium rounded-lg transition-all duration-200 cursor-pointer border-none relative overflow-hidden text-center;
   }
 
   .btn-primary {
@@ -159,11 +159,11 @@
   }
 
   .section-container {
-    @apply max-w-6xl mx-auto px-6 relative z-[2];
+    @apply max-w-6xl mx-auto px-4 sm:px-6 relative z-[2];
   }
 
   .section-header {
-    @apply text-center mb-16;
+    @apply text-center mb-12 sm:mb-16;
   }
 
   .section-label {
@@ -171,10 +171,10 @@
   }
 
   .section-title {
-    @apply text-5xl font-medium leading-tight tracking-tight mb-6;
+    @apply text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight mb-4 sm:mb-6;
   }
 
   .section-subtitle {
-    @apply text-lg text-text-secondary max-w-2xl mx-auto;
+    @apply text-base sm:text-lg text-text-secondary max-w-2xl mx-auto;
   }
 }

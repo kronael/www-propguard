@@ -8,7 +8,7 @@ import { PROBLEMS_DATA } from '@/lib/constants'
 
 const Problems = () => {
   return (
-    <section id="problems" className="py-24 bg-primary-surface border-t border-b border-border relative">
+    <section id="problems" className="py-16 sm:py-20 md:py-24 bg-primary-surface border-t border-b border-border relative">
       {/* Animated top border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent animate-slide-glow" />
 
@@ -20,7 +20,7 @@ const Problems = () => {
         />
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6"
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"

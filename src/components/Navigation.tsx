@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <motion.nav
       {...slideInFromTop}
-      className={`fixed top-0 left-0 right-0 z-[1000] py-5 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[1000] py-3 sm:py-5 transition-all duration-300 ${
         isScrolled
           ? 'bg-primary/85 backdrop-blur-xl border-b border-border'
           : 'bg-transparent'
@@ -19,7 +19,7 @@ const Navigation = () => {
     >
       <div className="section-container">
         <div className="flex justify-between items-center">
-          <div className="text-xl font-medium tracking-tight bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+          <div className="text-lg sm:text-xl font-medium tracking-tight bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
             propGuard_
           </div>
 
