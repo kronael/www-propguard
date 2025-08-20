@@ -5,7 +5,7 @@ import { fadeInUp, fadeInRight, scaleIn } from '@/lib/animations'
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center pt-20 sm:pt-30 pb-12 sm:pb-20 px-4 sm:px-0 bg-gradient-to-b from-primary via-primary to-primary relative">
+    <section className="min-h-screen flex items-center pt-24 sm:pt-30 pb-12 sm:pb-20 px-4 sm:px-0 bg-gradient-to-b from-primary via-primary to-primary relative">
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-b from-accent/[0.02] to-transparent" />
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-accent-green/[0.05] to-transparent rounded-full blur-3xl" />
@@ -19,10 +19,10 @@ const Hero = () => {
           <motion.div
             {...scaleIn}
             transition={{ ...scaleIn.transition, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-accent/5 border border-accent/20 rounded-full text-xs sm:text-xs font-semibold text-accent tracking-wider uppercase mb-6 sm:mb-8 relative overflow-hidden animate-glow-pulse"
+            className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-accent/5 border border-accent/20 rounded-full text-xs sm:text-xs font-semibold text-accent tracking-wider uppercase mb-6 sm:mb-8 relative overflow-hidden animate-glow-pulse"
           >
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent rounded-full animate-pulse" />
-            <span className="text-[10px] sm:text-xs">Live Analytics</span>
+            <span className="text-[11px] sm:text-xs">Live Analytics</span>
             {/* Shimmer effect */}
             <div className="absolute top-1/2 -left-full w-full h-full bg-gradient-to-r from-transparent via-accent/20 to-transparent animate-shimmer" />
           </motion.div>
