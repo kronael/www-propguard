@@ -36,10 +36,10 @@ const allianceNo1 = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'propGuard_ — Outsourced Risk Management for Prop Firms',
-  description: 'Detect arbitragers, cross-firm hedging, and abusive patterns. Best-in-class dashboards and data-driven decisions to protect payouts and profit.',
-  keywords: 'prop trading, risk management, arbitrage detection, trading analytics',
-  authors: [{ name: 'propGuard_' }],
+  title: 'profitGuard — Specialized Risk Management for Prop Firms',
+  description: 'Target arbitragers, cross-firm hedgers, and coordinated scammer rings. Protect payouts for legitimate traders—without hidden rules.',
+  keywords: 'prop trading, risk management, arbitrage detection, trading analytics, prop firm',
+  authors: [{ name: 'profitGuard' }],
 }
 
 export const viewport = {

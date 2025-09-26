@@ -7,7 +7,7 @@ import { Plus, Minus } from 'lucide-react'
 const faqData = [
   {
     question: 'Will this block legit traders?',
-    answer: 'We focus on explainable scores and human approvals. Rules are tuned to minimize false positives.',
+    answer: 'We target coordinated scammer rings—not legitimate traders. Explainable scores and approvals keep decisions transparent and support lighter rule sets.',
   },
   {
     question: 'Do you support my stack?',

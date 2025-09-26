@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import NavigationLink from './NavigationLink'
 import { slideInFromTop } from '@/lib/animations'
 import { useScrolled } from '@/hooks/useScrolled'
+import { BOOK_DEMO_URL } from '@/lib/site'
 
 const Navigation = () => {
   const isScrolled = useScrolled(20)
@@ -20,7 +21,7 @@ const Navigation = () => {
       <div className="section-container">
         <div className="flex justify-between items-center">
           <div className="text-lg sm:text-xl font-medium tracking-tight bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
-            propGuard_
+            profitGuard
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -28,7 +29,12 @@ const Navigation = () => {
             <NavigationLink href="#capabilities">Capabilities</NavigationLink>
             <NavigationLink href="#how-it-works">How it Works</NavigationLink>
             <NavigationLink href="#pricing">Pricing</NavigationLink>
-            <a href="#book-demo" className="btn btn-primary">
+            <a
+              href={BOOK_DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
               Book Demo
             </a>
           </div>

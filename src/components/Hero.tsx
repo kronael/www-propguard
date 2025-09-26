@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { fadeInUp, fadeInRight, scaleIn } from '@/lib/animations'
+import { BOOK_DEMO_URL } from '@/lib/site'
 
 const Hero = () => {
   return (
@@ -33,7 +34,7 @@ const Hero = () => {
             transition={{ ...fadeInRight.transition, delay: 0.2 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-tight sm:leading-none tracking-tight mb-6 sm:mb-8 bg-gradient-to-r from-white via-accent to-accent-green bg-clip-text text-transparent"
           >
-            Outsourced risk management—<br className="hidden sm:block" /><span className="sm:hidden"> </span>built for prop firms.
+            Specialized prop firm risk management—<br className="hidden sm:block" /><span className="sm:hidden"> </span>built for success.
           </motion.h1>
 
           {/* Subheadline */}
@@ -42,7 +43,7 @@ const Hero = () => {
             transition={{ ...fadeInUp.transition, delay: 0.4 }}
             className="text-lg sm:text-xl leading-relaxed text-text-secondary max-w-3xl mb-8 sm:mb-12"
           >
-            Flag arbitragers, cross-firm hedgers, and coordinated rings. Protect payouts, keep legit traders happy, and grow margins with data-driven decisions.
+            Flag sophisticated scammer rings. Protect payouts for legitimate traders—and grow challenge sales without hidden rules.
           </motion.p>
 
           {/* CTA buttons */}
@@ -51,7 +52,12 @@ const Hero = () => {
             transition={{ ...fadeInUp.transition, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center"
           >
-            <a href="#book-demo" className="btn btn-primary">
+            <a
+              href={BOOK_DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
               Book a Demo →
             </a>
             <a href="#how-it-works" className="btn btn-secondary">

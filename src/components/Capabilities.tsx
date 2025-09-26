@@ -38,7 +38,7 @@ const Capabilities = () => {
           <div className="section-label">Core Capabilities</div>
           <h2 className="section-title">Detection that scales with your sophistication</h2>
           <p className="section-subtitle">
-            From entity resolution to real-time scoring, we catch what others miss.
+            From entity resolution to real-time scoring, we catch what others miss—enabling lighter, transparent rules aligned with industry leaders.
           </p>
         </div>
 

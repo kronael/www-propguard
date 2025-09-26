@@ -1,4 +1,4 @@
-# propGuard Landing Page
+# ProfitGuard Landing Page
 
 A modern, responsive landing page built with Next.js, React, TypeScript, and Tailwind CSS.
 
@@ -17,7 +17,7 @@ https://kronael.github.io/www-propguard/
 ## Project Structure
 
 ```
-propguard/
+ProfitGuard/
 ├── src/
 │   ├── app/
 │   │   ├── globals.css      # Global styles and Tailwind utilities

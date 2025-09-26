@@ -8,7 +8,7 @@ const pricingData = [
     name: 'Starter',
     features: [
       'Essential detection models',
-      'Basic dashboards',
+      'Weekly insights summaries',
       'Email alerts',
       'Monthly reports',
     ],
@@ -21,7 +21,7 @@ const pricingData = [
     name: 'Growth',
     features: [
       'Advanced models & graph detection',
-      'Real-time dashboards',
+      'Real-time alerts',
       'API access & webhooks',
       'Automation playbooks',
       'Priority support',

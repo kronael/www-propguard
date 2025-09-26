@@ -11,7 +11,7 @@ const stepsData = [
   {
     number: '2',
     title: 'Detect',
-    description: 'Models & graph identify arbitragers, cross-firm hedgers, copy clusters.',
+    description: 'Models & graph identify arbitragers, cross-firm hedgers, scammer rings, and copy clusters.',
   },
   {
     number: '3',
@@ -34,6 +34,9 @@ const HowItWorks = () => {
           <h2 className="section-title">Four steps to protected payouts</h2>
           <p className="section-subtitle">
             From integration to action in days, not months.
+          </p>
+          <p className="section-subtitle">
+            Robust real‑time fraud detection enables lighter, transparent rules aligned with industry leaders.
           </p>
         </div>
 

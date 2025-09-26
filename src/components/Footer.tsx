@@ -18,10 +18,10 @@ const Footer = () => {
           {/* Brand column */}
           <div>
             <div className="text-2xl font-medium mb-4 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
-              propGuard_
+              profitGuard
             </div>
             <p className="text-text-secondary text-sm leading-relaxed">
-              Outsourced risk management built for prop firms. Protect payouts, catch abuse, and grow margins with data-driven decisions.
+              Specialized risk management for prop firms. Flag coordinated scammer rings, protect payouts for legitimate traders, and enable lighter, transparent rule sets aligned with industry leaders.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-muted"
         >
-          <div>© {currentYear} propGuard_. All rights reserved.</div>
+          <div>© {currentYear} profitGuard. All rights reserved.</div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-text-primary transition-colors">Status</a>
             <a href="#" className="hover:text-text-primary transition-colors">Support</a>
